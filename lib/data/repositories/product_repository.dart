@@ -35,8 +35,7 @@ class ProductRepository {
     await _box.put(product.name, product);
   }
 
-  Future<void> toggleFavorite(Product product) async {
-    product.isFavorite = !product.isFavorite;
+  Future<void> updateProduct(Product product) async {
     await _box.put(product.name, product);
   }
 }
